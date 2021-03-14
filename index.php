@@ -26,7 +26,6 @@ function valid($valid, $opt = "")
 }
 
 $db_conn = mysqli_connect("localhost", "skribbl", "HT5T8Sup98jGS5pq", "skribbl");
-mysqli_set_charset($db_conn, "utf8mb4");
 
 // only do work if have a "POST"
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
