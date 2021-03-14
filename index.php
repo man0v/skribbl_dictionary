@@ -25,7 +25,7 @@ function valid($valid, $opt = "")
     return true;
 }
 
-$db_conn = mysqli_connect("localhost", "homestead", "secret", "scribbl");
+$db_conn = mysqli_connect("localhost", "skribbl", "HT5T8Sup98jGS5pq", "skribbl");
 
 // only do work if have a "POST"
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -267,7 +267,7 @@ if (isset($_GET['generate'])) {
                 $q = mysqli_query($db_conn, "select * from words where `ban` = 0");
                 $total_num = mysqli_num_rows($q);
                 ?>
-                Total number of words <?= $total_num; ?>
+                Общ брой думи: <?= $total_num; ?>
             </div>
             <div>
                 <a href="?generate" class="btn">Изтегляне на 500 думи</a>
