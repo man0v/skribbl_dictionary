@@ -212,20 +212,30 @@ $db_conn = mysqli_connect("localhost", "skribbl", "HT5T8Sup98jGS5pq", "skribbl")
 		$total_num = mysqli_num_rows($q);
 	?>
 	<div>Total number of words <?=$total_num;?>
-	<div class="success">
-		<?php
+	<?
+		if(count($success)) { ?>
+		<div class="success">
+			<?
 			foreach($success as $v) {
 				print("<p>$v</p>");
 			}
+			?>
+		</div>
+		<?
+		}
 		?>
-	</div>
-	<div class="error">
-		<?php
+		<?
+		if(count($error)) { ?>
+		<div class="error">
+		<?
 			foreach($error as $v) {
 				print("<p>$v</p>");
 			}
 		?>
-	</div>
+		</div>
+		<?
+		}
+		?>
         <!--input name="user" type="text" placeholder="Your Name"-->
         <textarea placeholder="Message..." rows="5" name="gorgon"></textarea>
         <button type="submit" href="/">Enter</button>
