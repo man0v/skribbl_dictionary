@@ -168,10 +168,12 @@ $db_conn = mysqli_connect("localhost", "skribbl", "HT5T8Sup98jGS5pq", "skribbl")
       resize: none;
       }
       .success {
+      padding: 5px;
       background: green;
       color: white;
       }
       .error {
+      padding: 5px;
       background: red;
       color: white;
       }
