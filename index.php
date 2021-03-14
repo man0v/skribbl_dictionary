@@ -167,6 +167,14 @@ $db_conn = mysqli_connect("localhost", "skribbl", "HT5T8Sup98jGS5pq", "skribbl")
       .form-inner textarea {
       resize: none;
       }
+      .success {
+      background: green;
+      color: white;
+      }
+      .error {
+      background: red;
+      color: white;
+      }
       button {
       width: 100%;
       padding: 10px;
@@ -195,7 +203,7 @@ $db_conn = mysqli_connect("localhost", "skribbl", "HT5T8Sup98jGS5pq", "skribbl")
       <div class="form-right-decoration"></div>
       <div class="circle"></div>
       <div class="form-inner">
-	<a href="?generate=1">Generate words</a>
+	<a href="?generate=1&num=500">Изтегляне на 500 думи</a>
         <h1>Моля въведете грамотно написани думи на български език, разделени със запетайки.</h1>
 	<?php
 		$q = mysqli_query($db_conn, "select * from words where 1");
