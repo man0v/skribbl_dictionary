@@ -4,22 +4,22 @@ $error = [];
 $success = [];
 
 //xpuc7o
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 // written in early 2000s
-function valid($valid, $opt = "")
+function valid($valid)
 {
-    if ($valid == "") {
+    if ($valid == "") 
         return false;
-    }
+    
 
-    $allowed_chars = "абвгдежзийклмнопрстуфхцчшщъьюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪѝЮЯ ,$opt";
+    $split = preg_split('//u', $valid, null, PREG_SPLIT_NO_EMPTY);
+    $allowed_chars = "абвгдежзийклмнопрстуфхцчшщъьюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪѝЮЯ ,";
 
     for ($i = 0; $i < mb_strlen($valid); ++$i) {
-        if (mb_strpos($allowed_chars, $valid[$i]) === false) {
+        if (mb_strpos($allowed_chars, $split[$i]) === false) 
             return false;
-        }
     }
 
     return true;
