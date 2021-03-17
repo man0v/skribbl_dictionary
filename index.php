@@ -4,9 +4,9 @@ $error = [];
 $success = [];
 
 //xpuc7o
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 // written in early 2000s
 function valid($valid)
 {
